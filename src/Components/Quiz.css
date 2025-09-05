@@ -1,0 +1,139 @@
+.container {
+  width: 540px;
+  margin: auto;
+  margin-top: 150px;
+  background: white;
+  color: #262626;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 10px;
+  padding: 40px;
+}
+
+.container hr {
+  height: 2px;
+  border: none;
+  background: #707070;
+}
+
+.container h2 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.container ul li {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding-left: 15px;
+  border: 1px solid #605e5e;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.container button {
+  margin: auto;
+  width: 150px;
+  height: 60px;
+  background: #553f9a;
+  color: #fff;
+  font-size: 23px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.container .index {
+  margin: auto;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.correct {
+  background-color: #2a9242;
+  border-color: #28a745;
+}
+
+.wrong {
+  background-color: #dd4551;
+  border-color: #dc3545;
+}
+
+.timer {
+  font-size: 19px;
+  font-weight: 500;
+  color: #ff4d4d;
+  background-color: #ecd9d9;
+  padding: 10px 20px;
+  border-radius: 8px;
+  width: fit-content;
+  margin-top: 10px;
+}
+
+.next-btn.blocked {
+  background-color: #807c7c;
+  color: #0a0909;
+  cursor: not-allowed;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  text-align: center;
+  padding: 30px;
+}
+
+.result h2 {
+  font-size: 35px;
+}
+
+.result p {
+  font-size: 21px;
+  color: #333;
+}
+
+.emoji {
+  font-size: 28px;
+  font-weight: bold;
+  color: #444;
+  margin-top: 10px;
+}
+
+.emoji.animated {
+  animation: bounce 0.8s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.share-btn {
+  background-color: #25D366;
+  color: rgb(42, 39, 39);
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.twitter-btn {
+  background-color: #1da1f2;
+  margin-left: 60px;
+  margin-right: 60px;
+}
