@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import './Quiz.css';
 import { data } from '../assets/data';
 
-
 const Quiz = () => {
   const [index, setIndex] = useState(0);
   const [question, setQuestion] = useState(data[0]);
@@ -60,7 +59,7 @@ const Quiz = () => {
   const next = () => {
     if (timer > 0 && index < data.length - 1) {
       setBlocked(true);
-      setButtonText("🚫 Wait");
+      setButtonText("Wait");
       setTimeout(() => {
         setBlocked(false);
         setButtonText("Next");
@@ -70,9 +69,6 @@ const Quiz = () => {
 
     if (answered || index === data.length - 1) {
       if (index + 1 === data.length) {
-        // Play sound
-        const sound = document.getElementById('end-sound');
-        if (sound) sound.play();
         setIndex(prev => prev + 1);
       } else {
         const newIndex = index + 1;
@@ -114,7 +110,6 @@ const Quiz = () => {
     <div className="container">
       <h1>Quiz App</h1>
       <hr />
-      <audio id="end-sound" src="/quiz-end.mp3" preload="auto" />
       {index < data.length ? (
         <>
           <h2>{index + 1}. {question.question}</h2>
@@ -162,3 +157,4 @@ const Quiz = () => {
 };
 
 export default Quiz;
+
